@@ -1,0 +1,15 @@
+.navbar {    
+    opacity: 0.8;
+    background-color: #00a8ff;    
+}
+
+.navbar-brand {
+    color: #1d3577;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: x-large;
+}
+
+.nav-link {
+    font-family: 'Dela Gothic One', cursive;
+    color: whitesmoke;
+}

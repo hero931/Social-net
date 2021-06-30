@@ -43,7 +43,7 @@
               <a href="#learn" class="nav-link"><?php echo $user['first_name']; ?></a>
             </li>
             <li class="nav-item">
-              <a href="#questions" class="nav-link">Questions</a>
+              <a href="register/register.php" class="nav-link">Register</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link"><i class="far fa-home"></i></a>

@@ -1,4 +1,8 @@
-<?php include("includes/header.php"); ?>
+<?php 
+    include("includes/header.php");
+    include("includes/classes/User.php");
+?>
+
     
 <section class="p-5">        
     <div class="row g-4 mt-5">                
@@ -11,7 +15,7 @@
                         <div class="col p-3">
                             <div class="card-body">
                             <h5 class="card-title mb-3">
-                                <a href="#">
+                                <a href="<?php echo $userLoggedIn; ?>">
                                     <?php echo $user['first_name'] . " " . $user['last_name']; ?>
                                 </a>                                    
                             </h5>                        
@@ -45,12 +49,15 @@
             <div class="card bg-light">
                 <div class="card-body text-center">
                 <form class="post_form flex-row" action="index.php" method="POST">
-                    <div class="mb-3">                        
-                        <textarea type="email" class="form-control" placeholder="Got something to say?"  aria-describedby="post"></textarea>                        
+                    <div class="mb-6">                        
+                        <textarea type="email" class="form-control" placeholder="Got something to say?"  aria-describedby="post"></textarea>                                                
                     </div> 
                     <hr>                   
                     <button type="submit" id="post" class="btn btn-outline-secondary">Post</button>                    
                 </form>
+                <?php $user_obj = new User($con, $userLoggedIn);
+                    echo $user_obj->getFirstAndLastName();
+                ?>
                 </div>
             </div>
         </div>                        

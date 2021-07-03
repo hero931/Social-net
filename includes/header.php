@@ -40,7 +40,7 @@
         <div class="collapse navbar-collapse" id="navmenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#learn" class="nav-link"><?php echo $user['first_name']; ?></a>
+              <a href="<?php echo $userLoggedIn; ?>" class="nav-link"><?php echo $user['first_name']; ?></a>
             </li>
             <li class="nav-item">
               <a href="register/register.php" class="nav-link">Register</a>
